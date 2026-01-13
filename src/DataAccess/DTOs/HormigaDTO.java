@@ -99,6 +99,7 @@ public class HormigaDTO {
         + "\n Descripcion   : "+ getDescripcion     ()
         + "\n Estado        : "+ getEstado          ()
         + "\n FechaCreacion : "+ getFechaCreacion   ()
-        + "\n FechaModifica : "+ getFechaModifica   ();
+        + "\n FechaModifica : "+ getFechaModifica   ()
+        + "\n--------------------------- " ;
     }
 }

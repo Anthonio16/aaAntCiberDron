@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS Estado;
 DROP TABLE IF EXISTS HormigaTipo;
 DROP TABLE IF EXISTS AlimentoTipo; 
  
+ 
 CREATE TABLE AlimentoTipo(
      IdAlimentoTipo INTEGER PRIMARY KEY AUTOINCREMENT
     ,Nombre         VARCHAR(15)  NOT NULL UNIQUE
@@ -96,7 +97,7 @@ INSERT INTO AntCiberDron
 ('S004');
     
 INSERT INTO Hormiga
-(IdHormigaTipo, IdSexo, IdEstado, Nombre, Descripcion) values 
+(IdHormigaTipo, IdSexo, IdEstado, Nombre, Descripcion) VALUES
 (1, 2, 1, 'Hormiga1', 'Primera hormiga'),
 (2, 1, 1, 'Hormiga2', 'Segunda hormiga'),
 (3, 2, 1, 'Hormiga3', 'Tercera hormiga'),

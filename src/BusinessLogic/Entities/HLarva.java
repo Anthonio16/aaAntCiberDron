@@ -1,9 +1,8 @@
 package BusinessLogic.Entities;
 
-import java.util.List;
-
 import DataAccess.DTOs.HormigaDTO;
 import Infrastructure.AppException;
+import java.util.List;
 
 public class HLarva extends Hormiga {
 
