@@ -1,23 +1,59 @@
 
+import BusinessLogic.Entities.HLarva;
+import BusinessLogic.Entities.Hormiga;
+import BusinessLogic.FactoryBL;
 import DataAccess.DAOs.AntCiberDronDAO;
 import DataAccess.DTOs.AntCiberDronDTO;
+
+
 
 //  © 2K26 ❱──💀──❰ pat_mic ? code is life : life is code
 
 public class App {
     public static void main(String[] args)   {
 
+        //TEST BL
         try {
-            AntCiberDronDAO dao = new AntCiberDronDAO();
-            AntCiberDronDTO oDTO =  dao.readBy(2);
-            oDTO.setEstado("Serie-002");
-            dao.update(oDTO);
+            HLarva l = new HLarva();
+            System.out.println( l.getLava(1).toString() );
+            Hormiga h = l.comer("hierva");
+            System.out.println( h.toString() );
 
-            for ( var dto : dao.readAll() ) {           //var es lo que infiere el tipo de dato
-                System.out.println( dto.toString() );
-            }
+
+
+            //generic BL
+            // FactoryBL<AntCiberDronDTO> bl = new FactoryBL<>(AntCiberDronDAO.class);
+
+            // for (int i = 1; i <= bl.getAll().size(); i++) {
+            //     AntCiberDronDTO oDTO = bl.getBy(i);
+            //     oDTO.setSerie("Serie-BL" + i);
+            //     bl.upd(oDTO);
+            // }
+
+            // for (var dto : bl.getAll()) {
+            //     System.out.println(dto.toString());
+            // }
         } catch (Exception e) {
         }
+
+        // try {
+        //     AntCiberDronDAO dao = new AntCiberDronDAO();
+
+        //     for (int i = 1; i <= dao.readAll().size(); i++) {
+        //         AntCiberDronDTO oDTO =  dao.readBy(i);
+        //         oDTO.setSerie("Serie-002" + i);
+        //          dao.update(oDTO);
+        //     }
+
+        //     // AntCiberDronDTO oDTO =  dao.readBy(2);
+        //     // oDTO.setSerie("Serie-002");
+        //     // dao.update(oDTO);
+
+        //     for ( var dto : dao.readAll() ) {           //var es lo que infiere el tipo de dato
+        //         System.out.println( dto.toString() );
+        //     }
+
+        // } catch (Exception e) {}
 
 
         // try {

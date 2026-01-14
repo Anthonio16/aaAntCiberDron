@@ -15,7 +15,7 @@ public class HLarva extends Hormiga {
         return factory.getAll();
     }
     
-    public Hormiga comer(String comida) {
+    public Hormiga comer(String comida) {              //si la hormiga come carne se convierte en soldado
         if (comida.equals("carne")) {
             return new HSoldado();
         }

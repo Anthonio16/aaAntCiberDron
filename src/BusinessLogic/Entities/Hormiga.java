@@ -5,7 +5,7 @@ import DataAccess.DAOs.HormigaDAO;
 import DataAccess.DTOs.HormigaDTO;
 
 public abstract class Hormiga {
-    protected FactoryBL<HormigaDTO> factory = new FactoryBL<>(HormigaDAO.class);
+    protected FactoryBL<HormigaDTO> factory = new FactoryBL<>(HormigaDAO.class); //Esta protected para  que las subclases la puedan usar
     public HormigaDTO data = new HormigaDTO(); //AQUI ESTAN TODOS LOS CAMPOS DE LA HORMIGA
 
 
